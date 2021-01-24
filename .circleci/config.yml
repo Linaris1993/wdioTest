@@ -51,15 +51,15 @@ jobs:
 workflows:
   commit:
     jobs:
-       - build-and-test
+      - build-and-test
   nightly:
     triggers:
       - schedule:
-        cron: "0 0 * * *"
-        filters:
-          branches:
-            only:
-              - master
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - build-and-test
   # Below is the definition of your workflow.
