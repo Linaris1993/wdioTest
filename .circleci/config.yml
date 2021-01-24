@@ -54,13 +54,13 @@ workflows:
        - build-and-test
   nightly:
     triggers:
-      - schedule:
+    - schedule:
         cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
+        filters:
+          branches:
+            only:
                 - master
-      jobs:
+    jobs:
         - build-and-test
   # Below is the definition of your workflow.
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
